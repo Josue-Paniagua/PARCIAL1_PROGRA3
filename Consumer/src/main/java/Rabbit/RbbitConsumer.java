@@ -36,14 +36,21 @@ public class RbbitConsumer {
 		
 		Connection connection = factory.newConnection();
 		Channel channel = connection.createChannel();
-		chanel.queueDeclare("cola_duplicados", true, false , false, null)
+		channel.queueDeclare("cola_duplicados", true, false , false, null);
 		
 			
 		logger.info("Espernado los mensajes....");
         DeliverCallback deliverCallback = (consumerTag, delivery) -> {
 
 		String mensaje = new String(delivery.getBody(), "UTF-8");
+		String idTransaccion = mensaje.split("Transaccion")[1].split("")[0];
+		logger.info( "cola esta siendo atendida :" + delivery.getEnvelope().getRoutingKey());
+		logger.info("procesando el ID : " + idTransaccion);
 		logger.info("MENSAJE RECIBDO : " + mensaje);
+		
+		if (idProcesado.contains(idTransaccion)) {
+			
+		}
 		
 		boolean enviado = enviarPOST(mensaje);
 		if (!enviado) {
