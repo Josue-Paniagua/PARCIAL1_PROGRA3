@@ -4,6 +4,10 @@ public class Problema_2 {
 	
 	
 	public static int[] secondMinMax(int[]numbers) {
+		int min = Integer.MAX_VALUE;
+		int secondMin = Integer.MIN_VALUE;
+		
+		
 		
 	}
 	public static void main(String[] arg) {
