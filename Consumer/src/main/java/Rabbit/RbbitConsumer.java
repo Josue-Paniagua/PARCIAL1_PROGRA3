@@ -49,6 +49,10 @@ public class RbbitConsumer {
 		logger.info("MENSAJE RECIBDO : " + mensaje);
 		
 		if (idProcesado.contains(idTransaccion)) {
+			logger.info("ID" + idTransaccion + "cola de destino de los djuclipacos ");
+			channel.basicPublish("id ","cola duplicada", null, mensaje.getBytes());
+			channel.basicAck(delivery.getEnvelope().getDeliveryTag(), false);
+			
 			
 		}
 		
