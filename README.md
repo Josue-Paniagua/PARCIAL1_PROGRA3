@@ -61,3 +61,8 @@ Correo: jpaniaguao@miumg.edu.gt
 
 Curso: Arquitectura de Software / Sistemas Distribuidos
 Universidad: Universidad Mariano Gálvez de Guatemala
+
+VIDEO EJECUCION EN ECLIPSE 
+------------------------------------
+
+https://drive.google.com/file/d/1HaYegcL_YwBkYGk0-XBfqVd7CRWkybu2/view?usp=sharing
