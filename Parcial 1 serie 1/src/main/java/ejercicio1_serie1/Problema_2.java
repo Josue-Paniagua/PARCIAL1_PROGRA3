@@ -7,7 +7,7 @@ public class Problema_2 {
 	
 	public static void main(String[] arg) {
 		
-		int [] numeros2 = {6,8,2,4,5,10};
+		int [] numeros2 = {7,2,9,4,1,8};
         int[] resultado = secondMinMax(numeros2);
        
         System.out.println("Numero mernor del arreglo :" + resultado[0]);
@@ -18,7 +18,7 @@ public class Problema_2 {
 	}
 	public static int[] secondMinMax(int[]numbers) {
 		int min = Integer.MAX_VALUE;
-		int secondMin = Integer.MIN_VALUE;
+		int secondMin = Integer.MAX_VALUE;
 		int max = Integer.MIN_VALUE;
 		int secondMax = Integer.MIN_VALUE;
 		

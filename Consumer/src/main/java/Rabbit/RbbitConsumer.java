@@ -10,9 +10,16 @@ import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
 import java.time.Duration;
+import java.util.HashSet;
+import java.util.Set;
+
 
 
 public class RbbitConsumer {
+	
+	
+	private static Set<String> idProcesado = new HashSet<>();
+
 	private static final Logger logger = LogManager.getLogger(RbbitConsumer.class);
 	private static final HttpClient client = HttpClient.newBuilder()
 			.connectTimeout(Duration.ofSeconds(10))
@@ -29,6 +36,7 @@ public class RbbitConsumer {
 		
 		Connection connection = factory.newConnection();
 		Channel channel = connection.createChannel();
+		chanel.queueDeclare("cola_duplicados", true, false , false, null)
 		
 			
 		logger.info("Espernado los mensajes....");
