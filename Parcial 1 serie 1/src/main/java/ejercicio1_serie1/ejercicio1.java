@@ -17,7 +17,7 @@ public class ejercicio1 {
 	
 	public static int funcion(int num) {
 	if (num ==0) {
-		return 0;}
+		return 1;}
 	if (num ==5) {
 		return 5;
 	}
@@ -27,7 +27,6 @@ public class ejercicio1 {
 	return 3;
 	
 	}
-	
 	
 
 }
